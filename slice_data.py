@@ -23,11 +23,11 @@ def time_slice(num = int):
 def num_slice(num = int):
     count = int(data.shape[0]/num)
     j = num
-    data.to_csv(f'slicedata/{dataset_name}_mon{num}.csv')
+    data.to_csv(f'slicedata/{dataset_name}_mon{num}.csv', header=False, index=False)
     for i in range(num-1, 0, -1):
         j = j-1
         data.loc[count*i:, 'movie_rate'] = 0
-        data.to_csv(f'slicedata/{dataset_name}_mon{j}.csv', header=False)
+        data.to_csv(f'slicedata/{dataset_name}_mon{j}.csv', header=False, index=False)
         print(i, count*i)
 
 num_slice(15)
