@@ -10,6 +10,6 @@ def read_data(filename):
     matrix_list = matrix.values
     return matrix_list
 
-filepath = "slicedata/mon14.csv"
+filepath = "slicedata/amazon_mon14.csv"
 data = read_data(filepath)
 print(data.shape)

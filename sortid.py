@@ -9,26 +9,26 @@ data = new_.to_numpy()
 len_ = data.shape[0]
 repeat_list = []
 
-###############################清小於20
+###############################清小於50
 
-# check = int(1)
+check = int(1)
 
-# __ = [] 
-# new_len = (data.shape[0]-2)
-# for i in range(new_len):
-#     if data[i, 0] == data[i+1, 0]:
-#         check += 1
-#     else:
-#         if check < 50:
-#             for a in reversed(range(check)):
-#                 __.append(i-a)              
-#         check = 1
-# print(new_.shape)
-# print(f"clear_size:{len(__)}")
-# new_ = new_.drop(__)
-# data = np.delete(data, __, axis = 0)
+__ = [] 
+new_len = (data.shape[0]-2)
+for i in range(new_len):
+    if data[i, 0] == data[i+1, 0]:
+        check += 1
+    else:
+        if check < 30:
+            for a in reversed(range(check)):
+                __.append(i-a)              
+        check = 1
+print(new_.shape)
+print(f"clear_size:{len(__)}")
+new_ = new_.drop(__)
+data = np.delete(data, __, axis = 0)
 
-# print(new_.shape, data.shape)
+print(new_.shape, data.shape)
 
 ##################################換ID
 check = int(0)
